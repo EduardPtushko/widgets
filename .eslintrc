@@ -11,15 +11,15 @@
     "plugins": ["@typescript-eslint", "prettier", "react-hooks", "react"],
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "parserOptions": {
         "ecmaVersion": 2019,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-        },
-        "project": "./tsconfig.json"
+        }
     },
     "rules": {
         "react-hooks/rules-of-hooks": "error",
