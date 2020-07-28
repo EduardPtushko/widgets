@@ -12,13 +12,16 @@ module.exports = {
                     'not < 2%',
                     'not ie 11',
                 ],
+                useBuiltIns: 'usage',
+                corejs: { version: 3 },
             },
         ],
         '@babel/preset-react',
         '@babel/preset-typescript',
     ],
     plugins: [
-        '@babel/plugin-proposal-object-rest-spread',
-        '@babel/plugin-transform-runtime',
+        '@babel/plugin-proposal-nullish-coalescing-operator',
+        '@babel/plugin-proposal-optional-chaining',
+        'react-hot-loader/babel',
     ],
 };

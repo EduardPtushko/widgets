@@ -3,10 +3,15 @@
 
 # testing
 /coverage
+jest.config.js
+webpack.config.js
 
 # production
 /build
 /dist
+/app/assets/
+/builds/
+/public/
 
 # misc
 .DS_Store

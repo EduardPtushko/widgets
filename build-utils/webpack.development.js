@@ -1,0 +1,50 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
+
+module.exports = () => {
+    return {
+        devtool: 'inline-source-map',
+        devServer: {
+            contentBase: './dist',
+            hot: true,
+            overlay: true,
+            historyApiFallback: true,
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './public/index.html',
+            }),
+            new webpack.HotModuleReplacementPlugin(),
+            new Dotenv({
+                path: './.env.development',
+            }),
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    exclude: /\.module\.css$/,
+                    use: ['style-loader', 'css-loader'],
+                },
+                {
+                    test: /\.scss$/,
+                    use: ['style-loader', 'css-loader', 'sass-loader'],
+                },
+                {
+                    test: /\.module\.css$/,
+                    use: [
+                        { loader: 'style-loader' },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true,
+                                modules: true,
+                            },
+                        },
+                    ],
+                },
+            ],
+        },
+    };
+};
