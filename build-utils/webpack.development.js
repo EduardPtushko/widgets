@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
 module.exports = () => {
@@ -16,9 +15,6 @@ module.exports = () => {
                 template: './public/index.html',
             }),
             new webpack.HotModuleReplacementPlugin(),
-            new Dotenv({
-                path: './.env.development',
-            }),
         ],
         module: {
             rules: [

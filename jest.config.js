@@ -9,12 +9,12 @@ module.exports = {
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
     setupFilesAfterEnv: [
-        '<rootDir>/test/setupTests.js',
+        '<rootDir>/test/setupTests.ts',
         '@testing-library/jest-dom/extend-expect',
     ],
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-            '<rootDir>/test/__mocks__/fileMock.js',
+            '<rootDir>/test/__mocks__/fileMock.ts',
         '\\.(css|less|scss)$': 'identity-obj-proxy',
     },
 };
