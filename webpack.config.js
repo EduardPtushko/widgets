@@ -1,12 +1,12 @@
 const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require('./build-utils/loadPresets');
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
-    return webpackMerge(
+    return merge(
         {
             mode,
             entry: './src/index',
