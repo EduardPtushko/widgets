@@ -9,7 +9,7 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
     return merge(
         {
             mode,
-            entry: './src/index',
+            entry: ['react-hot-loader/patch','./src/index'],
             output: {
                 filename: '[name].[hash].js',
                 path: path.resolve(__dirname, 'dist'),
@@ -17,6 +17,9 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => {
             },
             resolve: {
                 extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+                alias: {
+                    'react-dom': '@hot-loader/react-dom'
+                }
             },
 
             module: {
