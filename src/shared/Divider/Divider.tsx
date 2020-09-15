@@ -5,7 +5,7 @@ interface DividerProps {
     title: string;
 }
 
-const Divider: React.FC<DividerProps> = ({ title }) => {
+export const Divider: React.FC<DividerProps> = ({ title }) => {
     return (
         <div className='host'>
             <h1>{title}</h1>
@@ -13,5 +13,3 @@ const Divider: React.FC<DividerProps> = ({ title }) => {
         </div>
     );
 };
-
-export default Divider;
