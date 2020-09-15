@@ -9,7 +9,7 @@ const Modules = lazy(() => import('../Modules'));
 import Menu from '../Menu';
 import Home from '../shared/Home';
 import ErrorBoundary from '../shared/Error/ErrorBoundary';
-import Spinner from '../shared/Spinner/Spinner';
+import { Spinner } from '../shared/Spinner/Spinner';
 
 const App: React.FC = () => {
     return (
