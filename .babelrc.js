@@ -6,14 +6,8 @@ module.exports = {
             '@babel/preset-env',
             {
                 modules: isTest ? 'commonjs' : false,
-                targets: [
-                    'last 2 versions',
-                    'not dead',
-                    'not < 2%',
-                    'not ie 11',
-                ],
                 useBuiltIns: 'usage',
-                corejs: { version: 3 },
+                corejs: '3.6',
             },
         ],
         '@babel/preset-react',

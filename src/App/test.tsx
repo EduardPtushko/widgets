@@ -8,7 +8,7 @@ import App from './';
 jest.mock('../shared/Home', () => () => <div>Home</div>);
 
 describe('App', () => {
-    test('renders successfully', () => {
+    test('renders', () => {
         const history = createMemoryHistory();
         const { container } = render(
             <Router history={history}>
