@@ -6,9 +6,9 @@ const Collections = lazy(() => import('../Collections'));
 const NotFound = lazy(() => import('../shared/NotFound'));
 const Views = lazy(() => import('../Views'));
 const Modules = lazy(() => import('../Modules'));
-import Menu from '../Menu';
-import Home from '../shared/Home';
-import ErrorBoundary from '../shared/Error/ErrorBoundary';
+import { Menu } from '../Menu/Menu';
+import { Home } from '../shared/Home/Home';
+import { ErrorBoundary } from '../shared/Error/ErrorBoundary/ErrorBoundary';
 import { Spinner } from '../shared/Spinner/Spinner';
 
 const App: React.FC = () => {
