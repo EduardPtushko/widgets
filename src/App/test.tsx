@@ -2,10 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import App from './';
+import App from './App';
 
-// eslint-disable-next-line react/display-name
-jest.mock('../shared/Home', () => () => <div>Home</div>);
+jest.mock('../shared/Home', () => ({
+    // eslint-disable-next-line react/display-name
+    Home: () => <div>Home</div>,
+}));
 
 describe('App', () => {
     test('renders', () => {

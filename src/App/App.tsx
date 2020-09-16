@@ -1,15 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
+
 const Elements = lazy(() => import('../Elements'));
 const Collections = lazy(() => import('../Collections'));
 const NotFound = lazy(() => import('../shared/NotFound'));
 const Views = lazy(() => import('../Views'));
 const Modules = lazy(() => import('../Modules'));
 import { Menu } from '../Menu/Menu';
-import { Home } from '../shared/Home/Home';
-import { ErrorBoundary } from '../shared/Error/ErrorBoundary/ErrorBoundary';
-import { Spinner } from '../shared/Spinner/Spinner';
+import { Home } from '../shared/Home';
+import { ErrorBoundary } from '../shared/ErrorBoundary';
+import { Spinner } from '../shared/Spinner';
 
 const App: React.FC = () => {
     return (

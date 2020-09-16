@@ -1,9 +1,0 @@
-.error-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.error-info {
-    color: orangered;
-}
