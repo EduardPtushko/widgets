@@ -38,17 +38,9 @@ describe('ErrorBoundary', () => {
             getByRole,
             queryByRole,
             queryByText,
-        } = render(
-            <ErrorBoundary>
-                <Bomb shouldThrow={false} />
-            </ErrorBoundary>,
-        );
+        } = render(<Bomb shouldThrow={false} />, { wrapper: ErrorBoundary });
 
-        rerender(
-            <ErrorBoundary>
-                <Bomb shouldThrow={true} />
-            </ErrorBoundary>,
-        );
+        rerender(<Bomb shouldThrow={true} />);
 
         const error = expect.any(Error);
         const info = { componentStack: expect.stringContaining('Bomb') };
@@ -65,11 +57,7 @@ describe('ErrorBoundary', () => {
         spy.mockClear();
         (mockReportError as jest.Mock).mockClear();
 
-        rerender(
-            <ErrorBoundary>
-                <Bomb shouldThrow={false} />
-            </ErrorBoundary>,
-        );
+        rerender(<Bomb shouldThrow={false} />);
 
         fireEvent.click(getByText(/Try again?/i));
 
