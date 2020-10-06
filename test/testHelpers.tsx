@@ -31,7 +31,7 @@ global.renderWithRouter = (renderComponent, route) => {
     return {
         ...render(
             <Router history={history}>
-                <React.Suspense fallback='Test Loading'>
+                <React.Suspense fallback="Test Loading">
                     {renderComponent()}
                 </React.Suspense>
             </Router>,
